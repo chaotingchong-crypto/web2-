@@ -1,43 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+  <meta charset="utf-8">
+  <title>My Self-Introduction</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="description" content="This is my personal self-introduction website.">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <!-- Icon Fonts -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Bootstrap & Animate -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">
+      
+      <style>
+        /* Portfolio 圖片統一大小 */
+        #portfolio .card-img-top {
+          width: 100%;
+          height: 250px; /* 統一高度 */
+          object-fit: cover; /* 保持比例、自動裁切 */
+          border-radius: 10px 10px 0 0;
+        }
+
+        /* Interests 區塊圖片方形 */
+        #skills img {
+          width: 100%;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+
+        /* Interests 區塊圖片 hover 放大效果 */
+        #skills img {
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        #skills img:hover {
+          transform: scale(1.05);
+          box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+      </style>
+      
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="container-fluid fixed-top">
+    <div class="container">
+      <nav class="navbar navbar-light navbar-expand-lg py-3">
+        <a href="index.html" class="navbar-brand">
+          <h1 class="mb-0">My<span class="text-primary">Intro</span></h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="fa fa-bars text-primary"></span>
+        </button>
+        <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+          <div class="navbar-nav ms-lg-auto mx-xl-auto">
+            <a href="#home" class="nav-item nav-link active">Home</a>
+            <a href="#about" class="nav-item nav-link">About</a>
+            <a href="#skills" class="nav-item nav-link">Interests</a>
+            <a href="#interests" class="nav-item nav-link">Characteristic</a>
+            <a href="#portfolio" class="nav-item nav-link">My College Life & Activities</a>
+            <a href="#contact" class="nav-item nav-link">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- Navbar End -->
+
+  <!-- Hero -->
+  <div id="home" class="container-fluid hero-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="hero-header-inner animated zoomIn">
+            <p class="fs-4 text-dark">Hello! I'm 張肇廷</p>
+            <h1 class="display-1 mb-5 text-dark">Welcome to My Page</h1>
+            <a href="#about" class="btn btn-primary py-3 px-5">Get to Know Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Hero End -->
+
+  <!-- About End -->
+<div id="about" class="container-fluid about py-5">
+  <div class="container py-5">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5 text-center">
+        <img src="img/IMG_1938拷貝.JPG" class="img-fluid shadow" style="max-width: 300px;" alt="My Photo">
+      </div>
+      <div class="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
+        <p class="fs-5 text-uppercase text-primary">About Me</p>
+        <h1 class="display-5 pb-3 m-0">張肇廷</h1>
+        <p class="pb-4">
+          我是一名就讀於國立台灣師範大學科技應用與人力資源發展學系大二，
+          平常喜歡去運動健身打羽球，也喜歡到處去走走，尋找特別的角落。
+        </p>
+      </div>
+    </div>
+
+    <!-- ⬇️ React 元件將會掛載在這個區域 -->
+    <div id="react-root"></div>
+    
+  </div>
+</div>
+
+  <!-- Interests -->
+  <div id="skills" class="container-fluid py-5 bg-light">
+    <div class="container text-center">
+      <h1 class="display-5 mb-4">My Interests</h1>
+      <p>Besides learning, I also like.....：</p>
+      <div class="row g-4">
+        
+        <!-- 1️⃣ Workout -->
+        <div class="col-md-3">
+          <div class="p-4 bg-white shadow rounded">
+            <i class="fas fa-dumbbell fa-2x text-primary mb-3"></i>
+            <h5>Works out</h5>
+            <img src="/img/IMG_1955.JPG" alt="Workout Photo"
+                 class="img-fluid mt-3"
+                 style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 10px;">
+          </div>
+        </div>
+
+        <!-- 2️⃣ Listening to music -->
+        <div class="col-md-3">
+          <div class="p-4 bg-white shadow rounded">
+            <i class="fas fa-headphones fa-2x text-primary mb-3"></i>
+            <h5>Listening to music</h5>
+            <img src="img/IMG_2584.JPG" alt="Music Photo"
+                 class="img-fluid mt-3"
+                 style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 10px;">
+          </div>
+        </div>
+
+        <!-- 3️⃣ Reading -->
+        <div class="col-md-3">
+          <div class="p-4 bg-white shadow rounded">
+            <i class="fas fa-book-open fa-2x text-primary mb-3"></i>
+            <h5>Reading</h5>
+            <img src="/img/IMG_2522.JPG" alt="Reading Photo"
+                 class="img-fluid mt-3"
+                 style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 10px;">
+          </div>
+        </div>
+
+        <!-- 4️⃣ Travelling -->
+        <div class="col-md-3">
+          <div class="p-4 bg-white shadow rounded">
+            <i class="fas fa-plane fa-2x text-primary mb-3"></i>
+            <h5>Travelling</h5>
+            <img src="img/IMG_1919.JPG" alt="Travel Photo"
+                 class="img-fluid mt-3"
+                 style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 10px;">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Interests End -->
+
+  <!-- Characteristics -->
+  <div id="interests" class="container-fluid py-5">
+    <div class="container text-center">
+      <h1 class="display-5 mb-4">My Characteristics</h1>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 bg-light rounded shadow">
+            <i class="fas fa-basketball-ball fa-2x text-primary mb-3"></i>
+            <h5>Willing to try new things</h5>
+            <p>I always take on new opportunities proactively, try learning and adapting quickly through practical experience and practice.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-light rounded shadow">
+            <i class="fas fa-music fa-2x text-primary mb-3"></i>
+            <h5>Optomistic</h5>
+            <p>I always maintain a positive outlook, staying motivated and seeking opportunities even in challenging situations</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-light rounded shadow">
+            <i class="fas fa-book fa-2x text-primary mb-3"></i>
+            <h5>Never Give Up</h5>
+            <p>When I encounter hardships, I face them  with determination and persistence, always striving to overcome obstacles and reach my goals. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Characteristics End -->
+
+  <!-- Portfolio -->
+  <div id="portfolio" class="container-fluid py-5 bg-light">
+    <div class="container text-center">
+      <h1 class="display-5 mb-4">My College Life & Activities</h1>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img src="IMG_2221.JPG" class="card-img-top" alt="宿營">
+            <div class="card-body">
+              <h5 class="card-title">新生宿營</h5>
+              <p class="card-text">是一個可以讓大家為大學的開始破冰並更好了解系上的活動</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img src="img/IMG_DSF8547拷貝.JPG" class="card-img-top" alt="科技營">
+            <div class="card-body">
+              <h5 class="card-title">科技營</h5>
+              <p class="card-text">是一個在寒假舉辦給高中生讓他們可以更瞭解科技系理解大學生活的營隊</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img src="fxn 2025-10-10 010341.122.JPG" class="card-img-top" alt="系出遊">
+            <div class="card-body">
+              <h5 class="card-title">系學會</h5>
+              <p class="card-text">在系上舉辦各種活動,凝聚大家的溫馨地方</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- my college End -->
+
+  <!-- Contact -->
+  <div id="contact" class="container-fluid py-5">
+    <div class="container text-center">
+      <h1 class="display-5 mb-4">Contact Me</h1>
+      <p class="mb-3"><i class="fas fa-envelope text-primary me-2"></i><a href="mailto:example@gmail.com">chaotingchong@gmail.com</a></p>
+      <p class="mb-3"><i class="fas fa-phone text-primary me-2"></i>+886-902-335-526</p>
+      <p><i class="fab fa-github text-primary me-2"></i><a href="https://github.com/你的帳號" target="_blank">https://github.com/chaotingchong-crypto</a></p>
+    </div>
+  </div>
+  <!-- Contact End -->
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3">
+    <p class="mb-0">&copy; 2025 My Self-Introduction. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>
+
+
+
