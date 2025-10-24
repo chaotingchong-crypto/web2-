@@ -1,3 +1,3 @@
-HW3 [15分鐘影片連結]()    
+HW3 [影片連結](https://www.youtube.com/watch?v=8mQydeW2rmk)    
 1.React 專案整合
 藉由React專案與個人網頁的整合，使個人網頁更豐富，透過 Gemini API 提供聊天的互動功能，可以跟模型聊天取得想暸解的資訊。  
